@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wghts@200;300;400;500;600;700;800;900&display=swap");
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url("/static/image/background.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #000;
+            box-shadow: rgb(38, 57, 77)0px 20px 30px -10px;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: rgba(111, 111, 111, 0.51);
+        }
+
+        th {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        td {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        table tr:first-child {
+            background: #000;
+        }
+
+        form {
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .back a {
+            text-decoration: none;
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 8px;
+            margin-left: 1450px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <div>
+                <h1>BOOKINGS</h1>
+            </div>
+            <div class="back">
+                <a href="/staff_profile">BACK</a>
+
+            </div>
+            {%csrf_token%}
+            <table>
+                <tr>
+                    <th>CUSTOMER</th>
+                    <th>ROOM</th>
+                    <th>CHECK_IN DATE</th>
+                    <th>CHECK_OUT DATE</th>
+                    <th>STATUS</th>
+                    <th>APPROVAL</th>
+                </tr>
+                {% for i in rr%}
+                <tr>
+                    <td>{{i.customer}}</td>
+                    <td>{{i.room}}</td>
+                    <td>{{i.checkin_date}}</td>
+                    <td>{{i.checkout_date}}</td>
+                    {% if i.approval %}
+                        <td class="approve">Approved</td>
+                    {% else %}
+                        <td class="pending">Pending</td>
+                    {% endif %}
+                    <td>
+                        <a class="book" href="{% url 'room_approve' i.id%}">View</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </form>
+
+    </div>
+</body>
+
+</html>

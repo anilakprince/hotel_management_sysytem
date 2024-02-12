@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wghts@200;300;400;500;600;700;800;900&display=swap");
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url("/static/image/background.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .form {
+            display: flex;
+            gap: 5px;
+            align-items: baseline;
+        }
+
+        .form input {
+            padding: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 40px 30px
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .heading p {
+            text-align: center;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            background: #7fc142;
+            font-weight: bold;
+            color: white;
+            width: 80px;
+            margin-left: 700px;
+            border-radius: 4px;
+
+        }
+
+        .back a {
+            text-decoration: none;
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 8px;
+            margin-left: 1300px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div class="heading">
+            <p>UPDATE PROFILE</p>
+        </div>
+        <div class="form">
+            {{form.as_p}}
+
+        </div>
+        <button type="submit" class="btn-primary">UPDATE</button>
+        <div class="back">
+            <a href="/staff_updateview">BACK</a>
+        </div>
+
+    </form>
+</body>
+
+</html>

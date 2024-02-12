@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourismart</title>
+   
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wghts@200;300;400;500;600;700;800;900&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    
+}
+h1,h2{
+    font-family: sans-serif;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.flex{
+    display: flex;
+}
+.flex_space{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.primary-btn{
+padding: 15px 40px;
+background: #7fc142;
+font-weight: bold;
+color: white;
+}
+.secondary-btn{
+padding: 15px 40px;
+background: none;
+border: 2px solid white;
+font-weight: bold;
+color: white;
+}
+.container{
+    max-width: 85%;
+    margin: auto;
+}
+.logo h3{
+            display: flex;
+            margin:0px 10px;
+            padding-left: 2px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .logo a{
+            display: flex;
+            margin: 10px;
+            padding-left: 2px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;  
+        }
+/*header*/
+header{
+    height: 10vh;
+    line-height: 10vh;
+    padding:0 20px;
+}
+header img{
+    margin: 10px 0;
+    width: 50px;
+}
+header ul{
+    display: inline-block;
+}
+header ul li{
+    display: inline-block;
+    text-transform: uppercase;
+}
+header ul li a{
+    color: #000;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+header ul li a:hover{
+    color: #7fc142;
+}
+header i{
+    margin: 0 20px;
+}
+header button{
+    padding: 13px 40px;
+}
+header .navlinks span{
+    display: none;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+.bottom-left {
+  position: absolute;
+  bottom: 80px;
+  left: 16px;
+  
+} 
+.bottom-left h1,p{
+    text-align: left;
+} 
+.bottom-left button{
+    margin-top: 20px;
+    margin-left: 10px;
+} 
+ 
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content flex_space">
+            <div class="logo">
+                <a href="/"><img src="/static/image/logo.png" alt=""><h3>QMIR</h3></a>
+            </div>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+   
+    <section class="home">
+        <div class="container">
+            <img src="/static/image/home.jpg" alt="Snow" style="width:100%;">
+            <div class="bottom-left">
+                <h1 style="font-size: 30px; font-weight: bold;">Spend Your Holiday</h1>
+                <p>You are welcome to relax and unwind in a quiet and elegant setting in the popular resort  <br>and enjoy a genuine experience of leisure, pleasure, gastronomy and wellness within the premises of the resort</p>
+                <div class="flex">
+                    <a href="/about"><button class="primary-btn">READ MORE</button></a>
+                    <a href="/contact"><button class="primary-btn">CONTACT US</button></a>
+                </div>
+            </div>
+        </div>    
+    </section>
+   
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wghts@200;300;400;500;600;700;800;900&display=swap");
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url("/static/image/background.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        form{
+            width: fit-content;
+            padding: 20px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .a1{
+            display: flex;
+            gap: 5px;
+            align-items: baseline;
+        }
+        select{
+            padding: 8px;
+        }
+        input{
+            padding: 8px;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .a2{
+            padding: 10px;
+            display: flex;
+            justify-content: end;
+        }
+        button{
+            background: black;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        button:hover,
+        button:focus,
+        button:active{
+            color: black;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="" method="POST" >
+            {%csrf_token%}
+            <div class="a1">
+                <div>
+                    <label for="">Customer:</label>
+                </div>
+                <div>
+                    {{form.customer}}
+                </div>
+            </div>
+            <div class="a1">
+                <div>
+                    <label for="">Room:</label>
+                </div>
+                <div>
+                    {{form.room}}
+                </div>
+            </div>
+            <div class="a1">
+                <div>
+                    <label for="">Check in date:</label>
+                </div>
+                <div>
+                    {{form.checkin_date}}
+                </div>
+            </div>
+            <div class="a1">
+                <div>
+                    <label for="">Check out date</label>
+                </div>
+                <div>
+                    {{form.checkout_date}}
+                </div>
+            </div>
+            <div class="a1">
+                <div>
+                    <label for="">Room Approval:</label>
+                </div>
+                <div>{{form.approval}}</div>
+            </div>
+            <div class="a2">
+                <button type="submit">SAVE</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

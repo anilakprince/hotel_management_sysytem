@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD ROOMS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wghts@200;300;400;500;600;700;800;900&display=swap");
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url("/static/image/background.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .card {
+            margin: 220px 500px;
+            width: 500px;
+            height: 250px;
+            background: none;
+            border: none;
+        }
+
+        .heading p {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .form {
+            display: flex;
+            gap: 5px;
+            align-items: baseline;
+        }
+
+        .form input {
+            padding: 5px;
+        }
+
+        .form label {
+            font-weight: bold;
+        }
+
+        .form form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            margin: auto;
+
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            padding: 15px 40px;
+            background: #7fc142;
+            font-weight: bold;
+            color: white;
+            border: none;
+            outline: none;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {%csrf_token%}
+            <div class="heading">
+                <p>ADD ROOM</p>
+            </div>
+            <div class="form">
+                {{form.as_p}}
+            </div>
+            <div class="button">
+                <button type="submit" class="btn btn-primary">ADD ROOM</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

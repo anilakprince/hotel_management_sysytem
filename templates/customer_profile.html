@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer_profile</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wghts@200;300;400;500;600;700;800;900&display=swap");
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url("/static/image/background.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .flex_space {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-primary {
+            padding: 15px 20px;
+            background: #7fc142;
+            font-weight: bold;
+            color: white;
+            border-radius: 4px;
+        }
+
+        .logo h3 {
+            display: flex;
+            margin: 15px;
+            padding-left: 2px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .logo a {
+            display: flex;
+            margin: 15px;
+            padding-left: 2px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+
+
+        header {
+            height: 10vh;
+            line-height: 10vh;
+            padding: 0 20px;
+        }
+
+        header img {
+            margin: 15px 0;
+            width: 50px;
+        }
+
+        header ul {
+            display: inline-block;
+        }
+
+        header ul li {
+            display: inline-block;
+            text-transform: uppercase;
+            list-style: none;
+        }
+
+
+        header ul li a {
+            color: #000;
+            margin: 0 10px;
+            transition: 0.5s;
+            text-decoration: none;
+        }
+
+        header ul li a:hover {
+            color: #7fc142;
+        }
+
+
+        .container {
+            width: 600px;
+            margin: auto;
+            border: 2px dolid black;
+            align-items: center;
+            border-radius: 10px;
+            margin-top: 100px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .sub_container {
+            background: black;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            padding: 20px;
+            padding-left: 30px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .image{
+           
+            height: 100px;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            width: 100px;
+            background-position:center top ;
+            border: 1px double white;
+        }
+
+        .user p {
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .user span {
+            color: #fff;
+            font-size: 10px;
+            font-weight: lighter;
+        }
+
+        .update img {
+            height: 20px;
+        }
+
+        .room {
+            padding: 20px;
+        }
+
+        .book {
+            display: flex;
+            gap: 5px;
+        }
+
+        .book p {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .book a {
+            text-decoration: none;
+            padding: 8px;
+            color: #fff;
+        }
+
+        
+
+        .book button {
+            margin-top: -10px;
+        }
+
+        .account {
+            padding: 10px;
+        }
+
+        .action {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .action a {
+            padding: 8px;
+            color: #fff;
+            text-decoration: none;
+            
+        }
+
+      
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="content flex_space">
+            <div class="logo">
+                <a href="/"><img src="/static/image/logo.png" alt="">
+                    <h3>QMIR</h3>
+                </a>
+            </div>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        
+        <div class="container">
+            <div class="sub_container">
+                <div class="content">
+                    
+                    <div class="user">
+                        <p>{{name}} <span>Guest</span></p>
+                        <span>{{mobile_number}}</span>
+                    </div>
+                </div>
+                <div class="update">
+                    <a href="{% url 'customer_update' id %}"><img
+                            src="/static/image/edit.png"
+                            alt=""></a>
+                </div>
+            </div>
+            <div class="room">
+                <div class="book">
+                    <div>
+                        <p>Book My Room:</p>
+                    </div>
+                    <div>
+                        <a href="/rooms"><button class="btn-primary">BOOK NOW</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account">
+                <div class="action">
+                    <div>
+                        <a href="{% url 'customer_delete' id %}"><button class="btn-primary">DELETE ACCOUNT</button></a>
+                    </div>
+                    <div>
+                        <a href="/customer_logout/"><button class="btn-primary">LOGOUT</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

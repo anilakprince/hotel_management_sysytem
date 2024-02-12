@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wghts@200;300;400;500;600;700;800;900&display=swap");
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /*header*/
+        header {
+            height: 10vh;
+            line-height: 10vh;
+            padding: 0 20px;
+        }
+        .flex_space {
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo h3{
+            display: flex;
+            margin: 15px;
+            padding-left: 2px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .logo a{
+            display: flex;
+            margin: 15px;
+            padding-left: 2px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;  
+        }
+
+        header img {
+            margin: 15px 0;
+            width: 50px;
+        }
+
+        header ul {
+            display: inline-block;
+        }
+
+        header ul li {
+            display: inline-block;
+            text-transform: uppercase;
+            list-style: none;
+        }
+
+        header ul li a {
+            color: #000;
+            margin: 0 10px;
+            transition: 0.5s;
+            text-decoration: none;
+        }
+
+        header ul li a:hover {
+            color: #7fc142;
+        }
+        section{
+            margin: 25px 40px;
+        }
+        
+        #hotel-facilities {
+            background-color: #d0d0d0;
+            margin-top: 20px;
+            padding: 30px;
+            float: left;
+            width: 100%;
+            position: relative;
+            transition: 0.5s;
+            margin-left: 40px;
+            margin-right: 40px;
+           
+        }
+
+        #hotel-facilities h2 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .container {
+            max-width: 85%;
+            margin: auto;
+        }
+
+        .col{
+        margin-left: 150px;
+       }
+
+       .img-responsive{
+        width: 200px;
+        height: 150px;
+       }
+       .col{
+        margin-left: 150px;
+       }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="content flex_space">
+            <div class="logo">
+                <a href="/"><img src="/static/image/logo.png" alt=""><h3>QMIR</h3></a>
+            </div>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="/static/image/about.jpeg" class="img-fluid mx-auto d-block" alt="" style="width: 400px;">
+            </div>
+            <div class="col-lg-6">
+                <p class="heading"><b>About Us</b></p>
+                <p class="text-muted text-justifyr">Welcome to QMIR <br>
+                    Queen Mary Island Resort is a boutique hotel with a camping vibe, complete with outdoor S’mores fire pits, 
+                    trail maps, and even an indoor camping tent. The website for the hotel plays up this theme and increases guest anticipation for an 
+                    exciting trip.
+
+</p> 
+            </div>
+        </div>
+    
+
+
+    
+      
+    
+    
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="heading"><b>Our Vision</b></p>
+                <p class="text-muted text-justifyr;">Our long-term vision is to be the company of choice for guests, owners and talent.
+                     Whenever a guest plans a trip, or an investor or owner is thinking of a partner, or whenever someone is looking for a career
+                     in the hospitality industry, they will all think of Radisson Hotel Group first.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="/static/image/vission.avif"
+                    alt="" style="width: 400px;">
+                
+            </div>
+        </div>
+    
+    </section>
+    <div id="hotel-facilities">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h2>Hotel Facilities</h2>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col">
+                    <img src="/static/image/restaurant.jpg" class="img-responsive" alt="Image">
+                    <h3 class="heading">Restaurant</h3>
+                        <p></p>
+                        
+                        <p class="service-hour">
+                            <span>Service Hours</span>
+                            <strong>7:30 AM - 8:00 PM</strong>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="/static/image/bar.jpeg" class="img-responsive" alt="Image">
+                        <h3 class="heading">Bars</h3>
+                        <p></p>
+                        
+                        <p class="service-hour">
+                            <span>Service Hours</span>
+                            <strong>7:00 PM - 8:00 PM</strong>
+                        </p>
+                  </div>
+                </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/static/image/wifi.jpg" class="img-responsive" alt="Image">
+                                    <h3 class="heading">Wi-Fi</h3>
+                                    <p>
+                                    </p>
+                                    <p class="service-hour">
+                                        <span>Service Hours</span>
+                                        <strong>24*7</strong>
+                                    </p>
+                                </div>
+                           
+                                <div class="col">
+                                    <img src="/static/image/pool.webp" class="img-responsive" alt="Image">
+                                    <h3 class="heading">Swimming Pool</h3>
+                                    <p>
+                                    </p>
+                                    <p class="service-hour">
+                                        <span>Service Hours</span>
+                                        <strong>7:30 AM - 8:00 PM</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/static/image/spa.jpg" class="img-responsive" alt="Image">
+                                    <h3 class="heading">Spa</h3>
+                                    <p>
+                                    </p>
+                                    <p class="service-hour">
+                                        <span>Service Hours</span>
+                                        <strong>7:30 AM - 8:00 PM</strong>
+                                    </p>
+                                </div>
+                          
+                                <div class="col">
+                                    <img src="/static/image/gym.jpeg" class="img-responsive" alt="Image">
+                                    <h3 class="heading">Gym</h3>
+                                    <p>
+                                    </p>
+                                    <p class="service-hour">
+                                        <span>Service Hours</span>
+                                        <strong>7:30 AM - 8:00 PM</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+       
+
+</body>
+
+</html>

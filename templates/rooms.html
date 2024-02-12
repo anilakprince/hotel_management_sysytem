@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOM</title>
+    <style>
+          @import url("https://fonts.googleapis.com/css2?family=Poppins:wghts@200;300;400;500;600;700;800;900&display=swap");
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url("/static/image/background.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #000;
+            box-shadow: rgb(38, 57, 77)0px 20px 30px -10px;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: rgba(111, 111, 111, 0.51);
+        }
+
+        th {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        td {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        table tr:first-child {
+            background: #000;
+        }
+
+        form {
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .back a {
+            text-decoration: none;
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 8px;
+            margin-left: 1450px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="">
+            <div>
+                <h1>BOOK </h1>
+            </div>
+            <div class="back">
+                <a href="/customer_profile">BACK</a>
+
+            </div>
+            {%csrf_token%}
+            <table>
+                <tr>
+                    <th>ROOM NO.</th>
+                    <th>ROOM TYPE</th>
+                    <th>ROOM PRICE</th>
+                    <th>AVAILABILITY</th>
+                    <th>BOOK</th>
+                </tr>
+                {% for i in rr%}
+            <tr>
+                <td>{{i.room_number}}</td>
+                <td>{{i.room_type}}</td>
+                <td>RS.{{i.room_price}}</td>
+                    {% if i.availability %}
+                       <td class="available">Available</td>
+                    {% else %}    
+                       <td class="notavailable">Not Available</td>
+                    {% endif %}
+                <td>
+                    <a class="book" href="/booking">BOOK</a>
+                </td>
+            </tr>
+            {% endfor %}
+            </table>
+        </form>
+    </div>
+</body>
+</html>
